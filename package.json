@@ -1,6 +1,6 @@
 {
   "name": "regexpvalidator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Validation for String, numbers and objects in javascript",
   "main": "dist/index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "chai":"3.5.0",
     "webpack":"1.12.14",
     "babel-eslint": "^5.0.0-beta4",
+    "babel-core":"^6.2.0",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.0.0",
     "eslint-loader": "^1.1.0"

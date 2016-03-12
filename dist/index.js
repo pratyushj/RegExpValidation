@@ -44,6 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+  'use strict';
+
   module.exports = __webpack_require__(1)(__webpack_require__(2), __webpack_require__(3), __webpack_require__(4), __webpack_require__(5), __webpack_require__(6));
 
 /***/ },
@@ -57,8 +59,8 @@
       var combined = Array.prototype.slice.call(arguments);
       var combinedObj = {};
 
-      combined.forEach(classType => {
-          Object.keys(classType).forEach(methodName => {
+      combined.forEach(function (classType) {
+          Object.keys(classType).forEach(function (methodName) {
               if (classType.hasOwnProperty(methodName)) {
                   combinedObj[methodName] = classType[methodName];
               }
@@ -81,7 +83,7 @@
    * @param minSize
    * @returns {*|boolean}
    */
-  StringValidations.isSizeSmallerThanN = (string, minSize) => {
+  StringValidations.isSizeSmallerThanN = function (string, minSize) {
       return string ? string.length < minSize : minSize > 0;
   };
 
@@ -92,7 +94,7 @@
    * @returns {*|boolean}
    */
 
-  StringValidations.isSizeGreaterThanN = (string, maxSize) => {
+  StringValidations.isSizeGreaterThanN = function (string, maxSize) {
       return string ? string.length > maxSize : maxSize < 0;
   };
 
@@ -100,26 +102,26 @@
    * Testing for a valid email address
    *
    */
-  StringValidations.isValidEmail = string => {
+  StringValidations.isValidEmail = function (string) {
       return string ? /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(string) : false;
   };
 
-  StringValidations.containsOnlyLetters = string => {
+  StringValidations.containsOnlyLetters = function (string) {
       return string ? /^[a-zA-Z]+$/.test(string) : false;
   };
 
-  StringValidations.containsOnlySmallCaseLetters = string => {
+  StringValidations.containsOnlySmallCaseLetters = function (string) {
       return (/^[a-z]+$/.test(string)
       );
   };
 
-  StringValidations.containsOnlyCapsLetters = string => {
+  StringValidations.containsOnlyCapsLetters = function (string) {
       return (/^[A-Z]+$/.test(string)
       );
   };
 
-  StringValidations.isStringWithSplChars = string => {};
-  StringValidations.matchStringWithPattern = (string, pattern) => {
+  StringValidations.isStringWithSplChars = function (string) {};
+  StringValidations.matchStringWithPattern = function (string, pattern) {
       pattern = typeof pattern == 'string' ? new RegExp(pattern) : pattern;
       return pattern instanceof RegExp ? pattern.test(string) : false;
   };
@@ -135,26 +137,26 @@
 
   var NumberValidators = {};
 
-  NumberValidators.isPositive = number => {
+  NumberValidators.isPositive = function (number) {
       return parseFloat(number) > 0;
   };
 
-  NumberValidators.isNegative = number => {
+  NumberValidators.isNegative = function (number) {
       return parseFloat(number) < 0;
   };
 
-  NumberValidators.isNumber = number => {
+  NumberValidators.isNumber = function (number) {
       return (/^-?\d+$/.test(number)
       );
   };
 
-  NumberValidators.isDecimalNumber = number => {
+  NumberValidators.isDecimalNumber = function (number) {
       return (/^-?\d+\.\d+$/.test(number)
       );
   };
 
-  NumberValidators.hasNDecimalPlaces = (number, n) => {
-      var regExp = new RegExp(`^-?\\d+\.\\d{0,${ n }}$`);
+  NumberValidators.hasNDecimalPlaces = function (number, n) {
+      var regExp = new RegExp("^-?\\d+.\\d{0," + n + "}$");
       return regExp.test(number);
   };
 
@@ -170,7 +172,7 @@
 
   var ObjectValidators = {};
 
-  ObjectValidators.containsField = (obj, field) => {
+  ObjectValidators.containsField = function (obj, field) {
       return obj.hasOwnProperty(field);
   };
 
@@ -189,7 +191,7 @@
    * @param val
    * @returns {*|boolean}
    */
-  ObjectValidators.isEmpty = val => {
+  ObjectValidators.isEmpty = function (val) {
 
       var dataType = Object.prototype.toString.call(val);
 
@@ -233,11 +235,11 @@
 
   var FilterObject = {};
 
-  FilterObject.filterNumbers = string => {
+  FilterObject.filterNumbers = function (string) {
       return String(string).replace(/\D+/g, '').replace(/\W+/, '').replace(/\_+/, '');
   };
 
-  FilterObject.filterCharacters = string => {
+  FilterObject.filterCharacters = function (string) {
       return String(string).replace(/\d+/g, '').replace(/\W+/, '').replace(/\_+/, ''); //remove numbers and special characters
   };
 

@@ -1,6 +1,6 @@
 "use strict";
 
-var ObjectValidators = {};
+let ObjectValidators = {};
 
 /**
  *
@@ -9,7 +9,7 @@ var ObjectValidators = {};
  */
 ObjectValidators.isEmpty = (val)=> {
 
-    var dataType = Object.prototype.toString.call(val);
+    let dataType = Object.prototype.toString.call(val);
 
     if (['[object Number]', '[object RegExp]', '[object Boolean]'].indexOf(dataType) != -1) { // Numbers and RegEx can not be empty
 

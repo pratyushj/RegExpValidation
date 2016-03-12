@@ -1,7 +1,7 @@
 
 "use strict";
 
-var FilterObject = {};
+let FilterObject = {};
 
 
 FilterObject.filterNumbers = ( string )=>{

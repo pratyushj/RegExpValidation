@@ -2,7 +2,7 @@
 
 "use strict";
 
-var ObjectValidators = {};
+let ObjectValidators = {};
 
 
 ObjectValidators.containsField = (obj,field)=>{
