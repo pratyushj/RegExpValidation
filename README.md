@@ -168,11 +168,11 @@ regExpValidation.filterNumbers('3_BOXES_HAVE_55_BALLS')
 Method allows you filter all the characters in a string
 
 ```
-regExpValidation.filterNumbers('abcd')
+regExpValidation.filterCharacters('abcd')
 //=> 'abcd'
-regExpValidation.filterNumbers(-39)
+regExpValidation.filterCharacters(-39)
 //=> ''
-regExpValidation.filterNumbers('3_BOXES_HAVE_55_BALLS')
+regExpValidation.filterCharacters('3_BOXES_HAVE_55_BALLS')
 //=> 'BOXESHAVEBALLS'
 ```
 

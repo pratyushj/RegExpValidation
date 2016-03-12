@@ -1,6 +1,6 @@
 {
   "name": "regexpvalidator",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Validation for String, numbers and objects in javascript",
   "main": "dist/index.js",
   "scripts": {
