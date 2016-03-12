@@ -1,25 +1,28 @@
 {
-  "name": "validators",
+  "name": "regex validator",
   "version": "1.0.0",
   "description": "Validation for String, numbers and objects in javascript",
   "main": "dist/index.js",
   "scripts": {
+    "build":"webpack",
     "test": "mocha tests"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pratyushj/Validators.git"
+    "url": "git+https://github.com/pratyushj/RegExpValidation.git"
   },
   "keywords": [
     "Validations",
+    "RegExp",
+    "Regular Expressions",
     "JavaScript"
   ],
   "author": "Pratyush Kumar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pratyushj/Validators/issues"
+    "url": "https://github.com/pratyushj/RegExpValidation/issues"
   },
-  "homepage": "https://github.com/pratyushj/Validators#readme",
+  "homepage": "https://github.com/pratyushj/RegExpValidation#readme",
   "devDependencies":{
     "mocha":"2.4.5",
     "chai":"3.5.0",
