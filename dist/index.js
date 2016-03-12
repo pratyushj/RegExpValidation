@@ -54,8 +54,8 @@
 
   module.exports = function () {
       //dont move it to array functions, you dont get argument object
-      let combined = Array.prototype.slice.call(arguments);
-      let combinedObj = {};
+      var combined = Array.prototype.slice.call(arguments);
+      var combinedObj = {};
 
       combined.forEach(classType => {
           Object.keys(classType).forEach(methodName => {
@@ -73,7 +73,7 @@
 
   "use strict";
 
-  let StringValidations = {};
+  var StringValidations = {};
 
   /**
    *
@@ -133,7 +133,7 @@
   
   "use strict";
 
-  let NumberValidators = {};
+  var NumberValidators = {};
 
   NumberValidators.isPositive = number => {
       return parseFloat(number) > 0;
@@ -154,7 +154,7 @@
   };
 
   NumberValidators.hasNDecimalPlaces = (number, n) => {
-      let regExp = new RegExp(`^-?\\d+\.\\d{0,${ n }}$`);
+      var regExp = new RegExp(`^-?\\d+\.\\d{0,${ n }}$`);
       return regExp.test(number);
   };
 
@@ -168,7 +168,7 @@
 
   "use strict";
 
-  let ObjectValidators = {};
+  var ObjectValidators = {};
 
   ObjectValidators.containsField = (obj, field) => {
       return obj.hasOwnProperty(field);
@@ -182,7 +182,7 @@
 
   "use strict";
 
-  let ObjectValidators = {};
+  var ObjectValidators = {};
 
   /**
    *
@@ -191,7 +191,7 @@
    */
   ObjectValidators.isEmpty = val => {
 
-      let dataType = Object.prototype.toString.call(val);
+      var dataType = Object.prototype.toString.call(val);
 
       if (['[object Number]', '[object RegExp]', '[object Boolean]'].indexOf(dataType) != -1) {
           // Numbers and RegEx can not be empty
@@ -231,7 +231,7 @@
   
   "use strict";
 
-  let FilterObject = {};
+  var FilterObject = {};
 
   FilterObject.filterNumbers = string => {
       return String(string).replace(/\D+/g, '').replace(/\W+/, '').replace(/\_+/, '');

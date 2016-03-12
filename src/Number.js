@@ -1,7 +1,7 @@
 
 "use strict";
 
-let NumberValidators = {};
+var NumberValidators = {};
 
 NumberValidators.isPositive =  (number)=> {
     return parseFloat(number) > 0
@@ -20,7 +20,7 @@ NumberValidators.isDecimalNumber =   ( number )=>{
 };
 
 NumberValidators.hasNDecimalPlaces =  (number ,n )=> {
-    let regExp = new RegExp(`^-?\\d+\.\\d{0,${n}}$`);
+    var regExp = new RegExp(`^-?\\d+\.\\d{0,${n}}$`);
     return regExp.test(number)
 };
 
