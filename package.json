@@ -1,8 +1,8 @@
 {
   "name": "regexpvalidator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Validation for String, numbers and objects in javascript",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build":"webpack",
     "test": "mocha tests"
