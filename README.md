@@ -13,7 +13,7 @@ $ npm install regexpvalidator --save
 
 ## Usage
 ```
-var regExpValidation = require('RegExpValidation')
+var regExpValidation = require('regexpvalidator')
 ```
 
 ## API
