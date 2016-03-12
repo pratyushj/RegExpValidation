@@ -7,7 +7,7 @@ Validations Test For Strings, Numbers and Objects in JavaScript using Regular Ex
 Install with [npm](https://www.npmjs.com) 
 
 ```sh
-$ npm install RegExpValidation --save
+$ npm install regexpvalidator --save
 ```
 
 
