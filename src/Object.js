@@ -10,4 +10,4 @@ ObjectValidators.containsField = (obj,field)=>{
 };
 
 
-module.exports = ObjectValidators;
+export default ObjectValidators;

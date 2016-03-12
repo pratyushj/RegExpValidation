@@ -12,4 +12,4 @@ FilterObject.filterCharacters = ( string )=>{
     return String(string).replace(/\d+/g,'').replace(/\W+/,'').replace(/\_+/,''); //remove numbers and special characters
 };
 
-module.exports = FilterObject;
+export default FilterObject;

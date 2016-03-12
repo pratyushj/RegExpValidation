@@ -56,7 +56,7 @@ StringValidations.matchStringWithPattern =  (string, pattern)=>{
 };
 
 
-module.exports = StringValidations;
+export default StringValidations;
 
 
 

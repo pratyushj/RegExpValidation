@@ -5,12 +5,12 @@ let webpack = require('webpack');
 let config = {
 
     entry: './src/',
-
     output: {
         filename: 'index.js',
         path: './dist/',
         publicPath: './',
-        sourcePrefix: '  '
+        sourcePrefix: '  ',
+        libraryTarget:'umd'
     },
 
 

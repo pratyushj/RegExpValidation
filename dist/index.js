@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -46,7 +56,33 @@
 
   'use strict';
 
-  module.exports = __webpack_require__(1)(__webpack_require__(2), __webpack_require__(3), __webpack_require__(4), __webpack_require__(5), __webpack_require__(6));
+  var _String = __webpack_require__(1);
+
+  var _String2 = _interopRequireDefault(_String);
+
+  var _Number = __webpack_require__(2);
+
+  var _Number2 = _interopRequireDefault(_Number);
+
+  var _Object = __webpack_require__(3);
+
+  var _Object2 = _interopRequireDefault(_Object);
+
+  var _Common = __webpack_require__(4);
+
+  var _Common2 = _interopRequireDefault(_Common);
+
+  var _Filters = __webpack_require__(5);
+
+  var _Filters2 = _interopRequireDefault(_Filters);
+
+  var _MergeObjects = __webpack_require__(6);
+
+  var _MergeObjects2 = _interopRequireDefault(_MergeObjects);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  module.exports = (0, _MergeObjects2.default)(_String2.default, _Number2.default, _Object2.default, _Common2.default, _Filters2.default);
 
 /***/ },
 /* 1 */
@@ -54,27 +90,9 @@
 
   "use strict";
 
-  module.exports = function () {
-      //dont move it to array functions, you dont get argument object
-      var combined = Array.prototype.slice.call(arguments);
-      var combinedObj = {};
-
-      combined.forEach(function (classType) {
-          Object.keys(classType).forEach(function (methodName) {
-              if (classType.hasOwnProperty(methodName)) {
-                  combinedObj[methodName] = classType[methodName];
-              }
-          });
-      });
-      return combinedObj;
-  };
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-  "use strict";
-
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
   var StringValidations = {};
 
   /**
@@ -126,15 +144,18 @@
       return pattern instanceof RegExp ? pattern.test(string) : false;
   };
 
-  module.exports = StringValidations;
+  exports.default = StringValidations;
 
 /***/ },
-/* 3 */
+/* 2 */
 /***/ function(module, exports) {
 
   
   "use strict";
 
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
   var NumberValidators = {};
 
   NumberValidators.isPositive = function (number) {
@@ -160,30 +181,36 @@
       return regExp.test(number);
   };
 
-  module.exports = NumberValidators;
+  exports.default = NumberValidators;
 
 /***/ },
-/* 4 */
+/* 3 */
 /***/ function(module, exports) {
 
   
 
   "use strict";
 
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
   var ObjectValidators = {};
 
   ObjectValidators.containsField = function (obj, field) {
       return obj.hasOwnProperty(field);
   };
 
-  module.exports = ObjectValidators;
+  exports.default = ObjectValidators;
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports) {
 
   "use strict";
 
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
   var ObjectValidators = {};
 
   /**
@@ -224,15 +251,18 @@
       return val.length == 0;
   };
 
-  module.exports = ObjectValidators;
+  exports.default = ObjectValidators;
 
 /***/ },
-/* 6 */
+/* 5 */
 /***/ function(module, exports) {
 
   
   "use strict";
 
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
   var FilterObject = {};
 
   FilterObject.filterNumbers = function (string) {
@@ -243,7 +273,36 @@
       return String(string).replace(/\d+/g, '').replace(/\W+/, '').replace(/\_+/, ''); //remove numbers and special characters
   };
 
-  module.exports = FilterObject;
+  exports.default = FilterObject;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
+
+  exports.default = function () {
+      //dont move it to array functions, you dont get argument object
+      var combined = Array.prototype.slice.call(arguments);
+      var combinedObj = {};
+
+      combined.forEach(function (classType) {
+          Object.keys(classType).forEach(function (methodName) {
+              if (classType.hasOwnProperty(methodName)) {
+                  combinedObj[methodName] = classType[methodName];
+              }
+          });
+      });
+      return combinedObj;
+  };
+
+  ;
 
 /***/ }
-/******/ ]);
+/******/ ])
+});
+;

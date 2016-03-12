@@ -2,7 +2,9 @@
 let mocha = require('mocha');
 let chai = require('chai');
 
-let validators = require('../src/');
+let validators = require('../dist/index');
+
+
 
 describe('Strings', ()=> {
 

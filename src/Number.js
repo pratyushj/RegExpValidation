@@ -24,7 +24,7 @@ NumberValidators.hasNDecimalPlaces =  (number ,n )=> {
     return regExp.test(number)
 };
 
-module.exports = NumberValidators;
+export default NumberValidators;
 
 
 

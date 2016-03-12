@@ -41,4 +41,4 @@ ObjectValidators.isEmpty = (val)=> {
     return val.length == 0
 };
 
-module.exports = ObjectValidators;
+export default ObjectValidators;
