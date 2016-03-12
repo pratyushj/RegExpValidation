@@ -1,0 +1,32 @@
+{
+  "name": "validators",
+  "version": "1.0.0",
+  "description": "Validation for String, numbers and objects in javascript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratyushj/Validators.git"
+  },
+  "keywords": [
+    "Validations",
+    "JavaScript"
+  ],
+  "author": "Pratyush Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pratyushj/Validators/issues"
+  },
+  "homepage": "https://github.com/pratyushj/Validators#readme",
+  "devDependencies":{
+    "mocha":"2.4.5",
+    "chai":"3.5.0",
+    "webpack":"1.12.14",
+    "babel-eslint": "^5.0.0-beta4",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.0.0",
+    "eslint-loader": "^1.1.0"
+  }
+}
